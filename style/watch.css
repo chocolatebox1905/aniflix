@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  background-color: #141414;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: "Lato", "sans-serif";
+  color: #fefefe;
+}
+
+/*Episode bg*/
+#episode-vid {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #141414;
+}
+
+#episode-vid #bg-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*Episode gradient*/
+#wrapper-gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: #141414;
+}
+
+#play-wrapper {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#play-wrapper #play-btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[2];
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 2px solid #fefefe;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
+}
+
+#play-wrapper #play-btn #play-img {
+  height: 15px;
+}
+
+#play-wrapper #play-btn h2 {
+  color: #fefefe;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+#play-wrapper #play-btn:hover {
+  opacity: 1;
+  -webkit-transition: 450ms ease-in-out;
+  transition: 450ms ease-in-out;
+}
+
+.gap {
+  grid-row-gap: 15px;
+}
+
+@media only screen and (max-width: 780px) {
+  .navigation-wrapper {
+    height: 60px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    z-index: 99;
+    background-color: transparent;
+    left: 0;
+    top: 0;
+    right: 0;
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+  }
+  .navigation-wrapper #navigation-content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 93%;
+  }
+  .navigation-wrapper #navigation-content #back-btn {
+    background-color: transparent;
+    outline: none;
+    font-family: "Lato", "sans-serif";
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    color: #fefefe;
+    font-size: 15px;
+  }
+  .navigation-wrapper #navigation-content #back-btn #back-img {
+    height: 15px;
+    margin-right: 15px;
+  }
+  .navigation-wrapper.scrolled {
+    background-color: #141414 !important;
+    -webkit-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
+  }
+  #episode-wrapper {
+    height: 250px;
+    width: 100vw;
+    position: relative;
+  }
+  #episode-wrapper #wrapper-gradient {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.120886)), color-stop(57%, rgba(20, 20, 20, 0.765144)), to(#141414));
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.120886) 0%, rgba(20, 20, 20, 0.765144) 57%, #141414 100%);
+  }
+  #episode-wrapper #play-btn {
+    padding: 0px 25px;
+    height: 45px;
+    opacity: 1;
+  }
+  #info-wrapper {
+    width: 93%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (max-content)[3];
+        grid-template-rows: repeat(3, -webkit-max-content);
+        grid-template-rows: repeat(3, max-content);
+    grid-row-gap: 40px;
+  }
+  #info-wrapper #navigation-content {
+    display: none;
+  }
+  #info-wrapper #watch-btn {
+    width: 100%;
+  }
+  #info-wrapper h1 {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  #info-wrapper h2 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  #info-wrapper h3 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 1050px) {
+  body {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  body {
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+  }
+  .navigation-wrapper {
+    display: none;
+  }
+  #episode-wrapper {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: red;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  #episode-wrapper #wrapper-gradient {
+    background: -webkit-gradient(linear, right top, left top, from(rgba(20, 20, 20, 0.120886)), color-stop(57%, rgba(20, 20, 20, 0.765144)), to(#141414));
+    background: linear-gradient(270deg, rgba(20, 20, 20, 0.120886) 0%, rgba(20, 20, 20, 0.765144) 57%, #141414 100%);
+  }
+  #episode-wrapper #play-btn {
+    padding: 0px 30px;
+    height: 50px;
+  }
+  #info-wrapper {
+    width: auto;
+    height: 100%;
+    padding: 0px 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (max-content)[4];
+        grid-template-rows: repeat(4, -webkit-max-content);
+        grid-template-rows: repeat(4, max-content);
+    grid-row-gap: 40px;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / 2 / 2;
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+  }
+  #info-wrapper #navigation-content {
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 60px;
+  }
+  #info-wrapper #navigation-content #back-btn-info {
+    background-color: transparent;
+    outline: none;
+    font-family: "Lato", "sans-serif";
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 700;
+    color: #fefefe;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  #info-wrapper #navigation-content #back-btn-info #back-img {
+    height: 15px;
+    margin-right: 15px;
+  }
+  #info-wrapper h1 {
+    font-weight: 700;
+    font-size: 40px;
+  }
+  #info-wrapper h2 {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  #info-wrapper h3 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4rem;
+  }
+}
+/*# sourceMappingURL=watch.css.map */
