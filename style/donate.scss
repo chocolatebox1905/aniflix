@@ -24,6 +24,9 @@ h1, h2, h3, p {
         margin-bottom: 40px;
         display: grid;
         grid-template-rows: repeat(3, max-content);
+        background-color: #212121;
+        padding: 15px 8px;
+        border-radius: 4px;
 
         h4 {
             font-size: 14px;
@@ -34,11 +37,12 @@ h1, h2, h3, p {
         .donate {
             display: grid;
             grid-template-columns: max-content auto;
-            grid-column-gap: 15px;
+            grid-column-gap: 10px;
             align-items: center;
-            background-color: #212121;
-            padding: 10px 8px;
+            background-color: $bgColor;
             border-radius: 4px;
+            padding: 10px 5px;
+            overflow: hidden;
 
             .donate-img {
                 height: 20px;

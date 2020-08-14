@@ -20,6 +20,9 @@ h1, h2, h3, p {
     -ms-grid-rows: (max-content)[3];
         grid-template-rows: repeat(3, -webkit-max-content);
         grid-template-rows: repeat(3, max-content);
+    background-color: #212121;
+    padding: 15px 8px;
+    border-radius: 4px;
   }
   #donate-wrapper h4 {
     font-size: 14px;
@@ -32,13 +35,14 @@ h1, h2, h3, p {
     -ms-grid-columns: max-content auto;
         grid-template-columns: -webkit-max-content auto;
         grid-template-columns: max-content auto;
-    grid-column-gap: 15px;
+    grid-column-gap: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #212121;
-    padding: 10px 8px;
+    background-color: #141414;
     border-radius: 4px;
+    padding: 10px 5px;
+    overflow: hidden;
   }
   #donate-wrapper .donate .donate-img {
     height: 20px;
